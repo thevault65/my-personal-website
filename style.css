@@ -1,0 +1,253 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #f9f9f9;
+}
+
+header {
+  position: sticky;
+  top: 0;   
+  z-index: 1000;
+  background-color: #333333; 
+}
+
+ul.topnav {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-evenly;
+}
+
+ul.topnav li a {
+  display: block;
+  color: #f1f1f1;
+  padding: 16px 20px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover {
+  background-color: #dddddd;
+  color: black;
+}
+
+.banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/Ayanakoji.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.banner h2 {
+  font-size: 2.5rem;
+  margin: 0 0 15px 0;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin: 0 0 25px 0;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 10%;
+  background-color: white;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: black;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: black;
+  line-height: 1.6;
+}
+
+.about-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-visual img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hobbies-section {
+  padding: 60px 10%;
+  background-color: grey;
+  text-align: center;
+}
+
+.hobbies-section h2 {
+  font-size: 2rem;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.hobbies-grid {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.hobby-card {
+  flex: 1;
+  min-width: 250px;
+  max-width: 320px;
+  background-color: gray;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.hobby-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.hobby-card h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color:white;
+}
+
+.contact-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 10%;
+  background-color: white;
+}
+
+.contact-text {
+  flex: 1;
+}
+
+.contact-text h2 {
+  font-size: 2rem;
+  color:black;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  font-size: 1.1rem;
+  color: black;
+  padding: 12px 0;
+  
+}
+
+
+
+.contact-list a:hover {
+  color: white;
+}
+
+.contact-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-visual img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+  background-color: #222222;
+  color: #f1f1f1;
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .about-section,
+  .contact-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .about-visual,
+  .contact-visual {
+    order: -1; 
+  }
+
+  .contact-list {
+    text-align: left;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .hobbies-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hobby-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  ul.topnav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  ul.topnav li a {
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid #444;
+  }
+
+  .banner {
+    padding: 60px 20px;
+  }
+
+  .banner h2 {
+    font-size: 1.8rem;
+  }
+}
